@@ -1,0 +1,39 @@
+server:
+  port: 9999
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+spring:
+  application:
+    name: miaosha
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/miaosha?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    hikari: #数据库连接池
+      minimum-idle: 5
+      maximum-pool-size: 10
+  cloud: # 微服务配置
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  rabbitmq: # 消息队列rabbitmq
+    host: 10.11.2.67
+    port: 5672
+    username: guest
+    password: guest
+  redis: # redis
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        min-idle: 10
+        max-idle: 80
+        max-active: 80
+        max-wait: 1000
+        time-between-eviction-runs: 100
+    database: 1
+logging:
+  config: classpath:logback.xml

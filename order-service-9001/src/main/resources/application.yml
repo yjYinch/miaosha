@@ -1,0 +1,19 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/miaosha?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    hikari: #数据库连接池
+      minimum-idle: 5
+      maximum-pool-size: 10
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
