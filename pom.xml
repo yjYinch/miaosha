@@ -32,7 +32,7 @@
         <druid.version>1.2.2</druid.version>
         <jdbc.version>2.4.0</jdbc.version>
         <lombok.version>1.18.10</lombok.version>
-        <rabbitmq.version>2.4.0</rabbitmq.version>
+        <rabbitmq.version>2.4.4</rabbitmq.version>
     </properties>
 
     <dependencyManagement>
